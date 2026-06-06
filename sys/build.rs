@@ -192,6 +192,8 @@ fn main() {
 
     if cfg!(target_os = "windows") {
         config.cxxflag("/utf-8");
+        config.cxxflag("/EHsc");
+        config.cflag("/EHsc");
         println!("cargo:rustc-link-lib=advapi32");
     }
 
